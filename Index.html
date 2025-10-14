@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindTrack - Find Your Inner Calm</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: url("C:/Users/275680/Downloads/Gemini_Generated_Image_u1o8gru1o8gru1o8.png") no-repeat center center/cover;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .glass-container {
+      background-color: rgba(10, 25, 40, 0.4);
+      backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+    .brand-teal { color: #A8E6CF; }
+    .bg-brand-teal { background-color: #A8E6CF; }
+    .nav-link { position: relative; transition: color 0.3s ease; }
+    .nav-link::after {
+      content: ''; position: absolute; width: 100%; transform: scaleX(0);
+      height: 2px; bottom: -4px; left: 0; background-color: #A8E6CF;
+      transform-origin: bottom right; transition: transform 0.3s ease-out;
+    }
+    .nav-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+    @keyframes pulse {
+      0% { transform: scale(0.9); opacity: 0.8; }
+      100% { transform: scale(1.4); opacity: 0; }
+    }
+    .pulse-circle { animation: pulse 2.5s infinite cubic-bezier(0.4, 0, 0.2, 1); border-radius: 9999px; position: absolute; }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center text-white bg-gray-900">
+
+  <header class="w-full max-w-6xl glass-container mt-6 p-6 md:p-8 rounded-2xl flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <svg class="w-8 h-8 brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+      <span class="text-xl font-bold tracking-wider brand-teal">MINDTRACK</span>
+    </div>
+
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+      <a href="index.html" class="nav-link brand-teal">HOME</a>
+      <a href="about.html" class="nav-link text-white/80 hover:text-white">ABOUT</a>
+      <a href="features.html" class="nav-link text-white/80 hover:text-white">FEATURES</a>
+      <a href="login.html" class="px-4 py-2 rounded-full border border-white/30 text-white/80 hover:bg-white/10 transition">LOGIN / SIGN UP</a>
+    </nav>
+  </header>
+
+  <section class="w-full max-w-6xl glass-container mt-8 p-6 md:p-10 rounded-2xl">
+    <div class="flex flex-col md:flex-row items-center justify-between py-12 md:py-20">
+      <div class="max-w-lg text-center md:text-left mb-12 md:mb-0">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+          Find Your Inner Calm 🌿
+        </h1>
+        <p class="text-lg mb-8 text-white/80">
+          Monitor your mind, track your stress levels, and discover peace with our AI-powered insights.
+        </p>
+        <button class="px-8 py-3 rounded-full font-bold text-lg bg-brand-teal text-gray-900 shadow-lg hover:bg-opacity-90 transform hover:scale-105 transition">
+          Start Your Journey
+        </button>
+      </div>
+
+      <div class="relative flex items-center justify-center w-64 h-64 md:w-80 md:h-80">
+        <div class="pulse-circle inset-0 border-2 border-brand-teal/50"></div>
+        <div class="pulse-circle inset-0 border-2 border-brand-teal/50" style="animation-delay: 0.8s;"></div>
+        <div class="pulse-circle inset-0 border-2 border-brand-teal/50" style="animation-delay: 1.6s;"></div>
+        <img src="C:\Users\275680\OneDrive\Desktop\Pictures\Screenshots\Screenshot 2025-10-13 122710.png"
+             alt="Brain" class="rounded-full w-48 h-48 md:w-56 md:h-56 object-cover shadow-2xl z-10">
+      </div>
+    </div>
+  </section>
+
+  <footer class="w-full max-w-6xl text-center text-white/60 pb-8">
+    <p>© 2025 MindTrack | Designed with 🌿 for peace and clarity</p>
+  </footer>
+</body>
+</html>

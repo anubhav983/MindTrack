@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindTrack - Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: url("C:/Users/275680/Downloads/Gemini_Generated_Image_u1o8gru1o8gru1o8.png") no-repeat center center/cover;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .glass-container {
+      background-color: rgba(10, 25, 40, 0.45);
+      backdrop-filter: blur(18px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+    }
+    .glass-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    }
+    .brand-teal { color: #A8E6CF; }
+    .bg-brand-teal { background-color: #A8E6CF; }
+    .input-field {
+      background-color: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      transition: all 0.3s ease;
+    }
+    .input-field:focus {
+      outline: none;
+      border-color: #A8E6CF;
+      background-color: rgba(255,255,255,0.15);
+    }
+    .social-btn:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+    .password-toggle {
+      cursor: pointer;
+      color: #A8E6CF;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center text-white px-4">
+
+  <div class="glass-container w-full max-w-sm rounded-2xl p-6 text-center">
+  <!-- Logo -->
+  <div class="flex justify-center items-center space-x-2 mb-5">
+    <a href="index.html" class="flex items-center space-x-2">
+      <svg class="w-7 h-7 brand-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+      <h1 class="text-xl font-extrabold tracking-wider brand-teal">MindTrack</h1>
+    </a>
+  </div>
+
+  <h2 class="text-2xl font-bold mb-5">Log In 🌱</h2>
+
+  <!-- Login Form -->
+  <form class="space-y-4">
+    <input type="email" placeholder="Email" class="w-full p-3 rounded-lg input-field text-sm" required>
+
+    <div class="relative">
+      <input id="password" type="password" placeholder="Password" class="w-full p-3 rounded-lg input-field text-sm" required>
+      <span class="absolute right-3 top-3 password-toggle" onclick="togglePassword()">👁️</span>
+    </div>
+
+    <button type="submit"
+            class="w-full py-2.5 bg-brand-teal text-gray-900 font-bold rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
+      Log In
+    </button>
+  </form>
+
+  <!-- Social Login -->
+  <div class="mt-5 flex flex-col space-y-2.5">
+    <button class="w-full flex items-center justify-center py-2.5 rounded-full border border-white/30 bg-white/10 hover:bg-white/20 social-btn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google Logo" class="w-5 h-5 mr-3">
+      Continue with Google
+    </button>
+  </div>
+
+  <p class="text-sm text-white/70 mt-5">
+    Don't have an account?
+    <a href="signup.html" class="text-brand-teal hover:underline">Sign Up</a>
+  </p>
+</div>
+
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById('password');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+      } else {
+        passwordInput.type = 'password';
+      }
+    }
+  </script>
+
+</body>
+</html>
